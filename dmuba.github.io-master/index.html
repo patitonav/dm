@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DM UBA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <!-- div class="col-sm-3 sidenav" -->
+	<div class="col-xs-3 sidenav">
+      <h4>DM UBA</h4>
+      <ul class="nav nav-pills nav-stacked">
+	    <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+        <li><a data-toggle="pill" href="#teoricas">Teóricas</a></li>
+        <li><a data-toggle="pill" href="#practicas">Prácticos</a></li>
+        <li><a data-toggle="pill" href="#cronograma">Cronograma</a></li>
+        <li><a data-toggle="pill" href="#bibliografia">Bibliografía</a></li>
+        <li><a data-toggle="pill" href="#temas">Temas de interés</a></li>
+
+      </ul>
+    </div>
+	
+    <div class="col-sm-9">
+      <div class="tab-content">
+          <!-- Home -->
+          <div id="home" class="tab-pane fade in active">
+            <h4><small>Data Mining - UBA</small></h4>
+            <hr>
+            <h2>Curso de Minería de Datos</h2>
+            <h5><span class="glyphicon glyphicon-time"></span> <span class="label label-danger">Comisión 1</span> Martes de 19 a 22 hs </h5><h5><span class="glyphicon glyphicon-time"></span> <span class="label label-primary">Comisión 2</span> Viernes de 19 a 22 hs </h5><br>
+          </div>
+
+          <!-- Teoria -->
+          <div id="teoricas" class="tab-pane fade">
+            <h4><small>Data Mining - UBA</small></h4>
+            <hr>
+            <h2>Teóricas</h2>
+            <ul id="clases"></ul>
+          </div>
+          
+          <!-- Practica -->
+          <div id="practicas" class="tab-pane fade">
+            <h4><small>Data Mining - UBA</small></h4>
+            <hr>
+            <h2>Prácticas de Laboratorio</h2>
+            <ul>
+                <li>LAB01: Análisis Exploratorio y Preprocesamiento (Volumen I) [ <a href="dmuba.github.io/Practicos/LAB01/LAB01%20-%20Exploracion%20y%20Preprocesamiento.pdf" target="_blank">Consignas</a> ] [ <a href="https://rpubs.com/jumafernandez/eda_preprocessing" target="_blank">Presentación</a> ] [ <a href="https://github.com/dmuba/dmuba.github.io/raw/master/Practicos/LAB01/MPI_datasets.zip">Set de datos</a> ]</li>
+            </ul>	  
+		  
+<!--            <ul id="practicos"></ul>
+            <h2>TPs Entregables</h2>
+            <ul>
+                <li>TP01: Preprocesamiento de datos, integración y gestión de datos mediante una DB NOSQL [ <a href="dmuba.github.io/Practicos/TPs Entregables/TP01/TP01.pdf" target="_blank">Consignas</a> ]</li>
+                <li>Recursos (datasets & scripts) [ <a href="https://github.com/dmuba/dmuba.github.io/tree/master/Practicos/TPs Entregables/TP01" target="_blank">Abrir</a> ]</li>
+                <li>Fechas de entrega:
+                    <ul>
+                        <li>Comisión 1: 19/06</li>
+                        <li>Comisión 2: 22/06</li>
+                    </ul>
+                <li>Formato de entrega: [ <a href="https://github.com/dmuba/dmuba.github.io/raw/master/Practicos/TPs%20Entregables/Template_de_entrega.docx">doc</a> ]</li>
+                </li>
+            </ul>	  
+            <ul>
+                <li>TP02: Reglas de Asociación [ <a href="dmuba.github.io/Practicos/TPs Entregables/TP02/TP02.pdf" target="_blank">Consignas</a> ]</li>
+                <li>Dataset [ <a href="https://github.com/dmuba/dmuba.github.io/tree/master/Practicos/TPs Entregables/TP02/Shark_Attack_Data.csv" target="_blank">Enlace</a> ]</li>
+                <li>Fechas de entrega:
+                    <ul>
+                        <li>Comisión 1: 10/07</li>
+                        <li>Comisión 2: 13/07</li>
+                    </ul>
+                <li>Formato de entrega: [ <a href="https://github.com/dmuba/dmuba.github.io/raw/master/Practicos/TPs%20Entregables/Template_de_entrega.docx">doc</a> ]</li>
+                </li>
+            </ul>	  
+-->
+	      <h3>Software</h3>
+            <ul>
+                <li>Lenguaje R [ <a href="https://www.r-project.org/" target="_blank">Descargas</a> ]</li>
+		<li>RStudio [ <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">Descargas</a> ]</li>
+		<li>MongoDB - Instalador para Windows (64-bit) (182MB) [ <a href="https://fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.4-signed.msi" target="_blank">Instalador</a> ]<br/>Otras instalaciones: [ <a href="https://www.mongodb.com/download-center?#community">Aquí</a> ]</li>
+                <li>Robo3T (ex-Robomongo :D). Cliente para MongoDB [ <a href="https://robomongo.org/download" target="_blank">Descargas</a> ]</li>
+            </ul>
+            <h3>Guías</h3>
+              <ul>
+		      
+                <li>Guía laboratorio Nro. 1: Introducción a R <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-introduccionR.md" target="_blank">[ Abrir ]</a></li>
+		<li>Guía laboratorio Nro. 3: Interacción con MongoDB desde Robo3T. <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-labo03.md" target="_blank">[ Abrir ]</a></li>
+                <li>Guía laboratorio Nro. 4: Bases de datos textuales. <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-labo04.md" target="_blank">[ Abrir ]</a></li>
+                <li>Guía laboratorio Nro. 5: Introducción a reglas de asociación. <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-labo05.md" target="_blank">[ Abrir ]</a></li>
+                <li>Guía laboratorio Nro. 6: Introducción a reglas de asociación con Arules en R. <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-labo06.md" target="_blank">[ Abrir ]</a></li>
+                <li>Guía laboratorio Nro. 7: Introducción al Análisis de Secuencias (SPADE) <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-labo07.md" target="_blank">[ Abrir ]</a></li>
+                <li>Guía laboratorio Nro. 8: Reglas de Asociación FP-Growth <a href="https://github.com/dmuba/dmuba.github.io/blob/master/Practicos/guias/guia-labo08.md" target="_blank">[ Abrir ]</a></li>
+              </ul>
+          </div>
+      
+          <!-- Cronograma -->
+          <div id="cronograma" class="tab-pane fade">
+            <h4><small>Data Mining - UBA</small></h4>
+            <hr>
+            <h2>Cronograma de clases</h2>
+            <!-- iframe width="800px" height="750px" border="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJO0aGUlJDzBohsIjKKKoml_zdeBKAF2SLkSGDO6Ieivtr5nNGxP18fHe1OYYZCzhD3AthHXjTDqLH/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe -->
+            <iframe width="850px" height="750px" border="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJO0aGUlJDzBohsIjKKKoml_zdeBKAF2SLkSGDO6Ieivtr5nNGxP18fHe1OYYZCzhD3AthHXjTDqLH/pubhtml?gid=1053546966&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+          </div>
+          
+          <!-- Biblio -->
+          <div id="bibliografia" class="tab-pane fade">
+            <h4><small>Data Mining - UBA</small></h4>
+            <hr>
+            <h2>Bibliografía</h2>
+            <ul id="biblio"></ul>
+          </div>
+          
+          <!-- Temas -->
+          <div id="temas" class="tab-pane fade">
+            <h4><small>Data Mining - UBA</small></h4>
+            <hr>
+            <h2>Temas de interés</h2>
+            <p>En este apartado se presentan algunos temas que pueden servir como disparadores para la elección de trabajos finales de Especialización o Maestría.</p>
+<!--
+            <ul>
+                <li></li> 
+                <li></li>
+            </ul>
+-->
+           </div>
+        </div> <!-- end tab-->
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p></p>
+</footer>
+<script src="js/dmuba.js"></script>
+</body>
+</html>
